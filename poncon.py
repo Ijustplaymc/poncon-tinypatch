@@ -27,14 +27,14 @@ import usb.core
 from sys import exit, argv
 
 
-helpmsg = """poscon - a simple pseudoshell/command sender for pongoOS 
-Usage: poscon [arguments] 
-    or poscon
+helpmsg = """poncon - a simple pseudoshell/command sender for pongoOS 
+Usage: poncon [arguments] 
+    or poncon
 
 Arguments:
 -h\t\tShow this message
 -c [CMD]\tSend command and exit            
--s\t\tStart sending commands            
+-s\t\tDefault mode (shell-ish)        
             """
 
 class Console:
@@ -59,7 +59,7 @@ class Console:
             print("Couldn\'t set configuration")
             return 1
         
-        print("Sending commands is available\n")
+        print("Connected\n")
         return 0
 
     def openConsole(self):
@@ -68,7 +68,7 @@ class Console:
         while True:
             cmd = input("console: ")
             if cmd == "":
-                print("Cowardly refusing to send empty commands")
+                print("Command cannot be empty")
             elif cmd == "exit":
                 break
             else:
