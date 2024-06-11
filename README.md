@@ -1,14 +1,13 @@
 # poncon - a command sender for pongoOS
 
-A stupid python script. I wanted to send commands easily, so I wrote this. Type commands to send them to your device in pongoOS, or send single commands.
-
+A python script to send commands to a running pongoOS instance
 ## Usage
 
-`-h` - Show help message
+`-h` - Display help message
 
 
-`-c [CMD]` - Send single command
+`-c [CMD]` - Send a single command
 
 
-`-s` - Default mode, send commands in a shell-like environment
+`-s` - Default mode, send commands in a shell-like environment (ie, no arguments)
 
